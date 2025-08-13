@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>BypassNRO被移除？今天教你Windows11最新预览版跳过联网</title>
+      <link href="/post/EP07/"/>
+      <url>/post/EP07/</url>
+      
+        <content type="html"><![CDATA[<div class="video-container"><iframe src="//player.bilibili.com/player.html?isOutside=true&aid=114433145702739&bvid=BV121GzzMEJz&cid=30112088389&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe></div><style>.video-container {    position: relative;    width: 100%;    padding-top: 56.25%; /* 16:9 aspect ratio (height/width = 9/16 * 100%) */}.video-container iframe {    position: absolute;    top: 0;    left: 0;    width: 100%;    height: 100%;}</style><h1 id="Windows-11-最新预览版跳过联网"><a href="#Windows-11-最新预览版跳过联网" class="headerlink" title="Windows 11 最新预览版跳过联网"></a>Windows 11 最新预览版跳过联网</h1><h2 id="一、编辑注册表"><a href="#一、编辑注册表" class="headerlink" title="一、编辑注册表"></a>一、编辑注册表</h2><p>在注册表编辑器中，找到以下路径：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE</span><br></pre></td></tr></table></figure><p>创建或修改名为<code>BypassNRO</code>的注册表项，将其值设置为<code>1</code></p><h2 id="二、直接创建本地账户"><a href="#二、直接创建本地账户" class="headerlink" title="二、直接创建本地账户"></a>二、直接创建本地账户</h2><p>在命令提示符中输入以下命令：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">start</span> ms-cxh:localonly</span><br></pre></td></tr></table></figure><h2 id="三、脚本文件"><a href="#三、脚本文件" class="headerlink" title="三、脚本文件"></a>三、脚本文件</h2><p>将以下内容保存为<code>.bat</code>文件：</p><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d <span class="number">1</span> /f</span><br><span class="line">shutdown /r /t <span class="number">0</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> B站专栏 </category>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 跳过联网 </tag>
+            
+            <tag> 教程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
