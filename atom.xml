@@ -6,7 +6,7 @@
   <link href="https://blog.ctrlflow.us.kg/atom.xml" rel="self"/>
   
   <link href="https://blog.ctrlflow.us.kg/"/>
-  <updated>2025-08-13T08:35:12.011Z</updated>
+  <updated>2025-10-18T10:17:20.739Z</updated>
   <id>https://blog.ctrlflow.us.kg/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MyAI模板 - 创建自己的AI，网页部署，更好分享</title>
+    <link href="https://blog.ctrlflow.us.kg/post/MyAI/"/>
+    <id>https://blog.ctrlflow.us.kg/post/MyAI/</id>
+    <published>2025-08-12T18:48:44.000Z</published>
+    <updated>2025-10-18T10:17:20.739Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;MyAI模板-创建自己的AI，网页部署，更好分享&quot;&gt;&lt;a href=&quot;#MyAI模板-创建自己的AI，网页部署，更好分享&quot; class=&quot;headerlink&quot; title=&quot;MyAI模板 - 创建自己的AI，网页部署，更好分享&quot;&gt;&lt;/a&gt;MyAI模板 -</summary>
+        
+      
+    
+    
+    
+    <category term="开源项目" scheme="https://blog.ctrlflow.us.kg/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"/>
+    
+    <category term="教程" scheme="https://blog.ctrlflow.us.kg/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="AI" scheme="https://blog.ctrlflow.us.kg/tags/AI/"/>
+    
+    <category term="人工智能" scheme="https://blog.ctrlflow.us.kg/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+    <category term="教程" scheme="https://blog.ctrlflow.us.kg/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>BypassNRO被移除？今天教你Windows11最新预览版跳过联网</title>
@@ -40,9 +71,9 @@
     <category term="教程" scheme="https://blog.ctrlflow.us.kg/categories/B%E7%AB%99%E4%B8%93%E6%A0%8F/%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="跳过联网" scheme="https://blog.ctrlflow.us.kg/tags/%E8%B7%B3%E8%BF%87%E8%81%94%E7%BD%91/"/>
-    
     <category term="教程" scheme="https://blog.ctrlflow.us.kg/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="跳过联网" scheme="https://blog.ctrlflow.us.kg/tags/%E8%B7%B3%E8%BF%87%E8%81%94%E7%BD%91/"/>
     
   </entry>
   
