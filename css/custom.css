@@ -84,11 +84,22 @@
   display: inline-block;  
   max-width: 100%;       
 }
+
 body {
-  background: url('/imgs/bg/home_bg.png') no-repeat center center fixed;
+  /* 保留原始图片路径（/ 指向站点根），并添加备用背景色与显式属性以提高兼容性 */
+  background-image: url('/imgs/bg/home_bg.png');
+  background-color: #b9f4f3; /* fallback color */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
   background-size: cover;
 }
+
 [data-theme="dark"] body {
-  background: url('/imgs/bg/dark_mode.png') no-repeat center center fixed;
+  background-image: url('/imgs/bg/dark_mode.png');
+  background-color: #121212; /* fallback color for dark theme */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
   background-size: cover;
 }
