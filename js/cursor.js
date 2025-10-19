@@ -12,18 +12,18 @@ const getStyle2 = (el, attr) => {
 };
 
 const map = new Map();
-map.set('red', "rgb(241, 71, 71)");
-map.set('orange', "rgb(241, 162, 71)");
-map.set('yellow', "rgb(241, 238, 71)")
-map.set('purple', "rgb(179, 71, 241)");
-map.set('blue', "rgb(102, 204, 255)");
-map.set('gray', "rgb(226, 226, 226)");
+map.set('red', "rgb(57, 197, 187)");
+map.set('orange', "rgb(57, 197, 187)");
+map.set('yellow', "rgb(57, 197, 187)")
+map.set('purple', "rgb(57, 197, 187)");
+map.set('blue', "rgb(57, 197, 187)");
+map.set('gray', "rgb(57, 197, 187)");
 map.set('green', "rgb(57, 197, 187)");
-map.set('whitegray', "rgb(241, 241, 241)");
-map.set('pink', "rgb(237, 112, 155)");
-map.set('black', "rgb(0, 0, 0)");
-map.set('darkblue', "rgb(97, 100, 159)");
-map.set('heoblue', "rgb(66, 90, 239)");
+map.set('whitegray', "rgb(57, 197, 187)");
+map.set('pink', "rgb(57, 197, 187)");
+map.set('black', "rgb(57, 197, 187)");
+map.set('darkblue', "rgb(57, 197, 187)");
+map.set('heoblue', "rgb(57, 197, 187)");
 
 class Cursor {
   constructor() {
