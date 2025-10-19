@@ -1,3 +1,27 @@
+:root, html, body, .site, .page, .home-top, .hero-area {
+  background-color: transparent !important;
+}
+
+html, body {
+  background-image: url('https://cdn.szyd.fun/2025/08/11/68996b95eaa52.webp') !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  background-color: transparent !important;
+}
+
+[data-theme="dark"] html,
+[data-theme="dark"] body {
+  background-image: url('https://cdn.szyd.fun/2025/07/26/6884d6816223b.webp') !important;
+}
+
+@media (max-width: 768px) {
+  html, body {
+    background-attachment: scroll !important;
+    background-position: center top !important;
+  }
+}
 #welcome-info {
   background: linear-gradient(45deg, #b9f4f3, #e3fbf9);
   border-radius: 18px;
@@ -84,22 +108,94 @@
   display: inline-block;  
   max-width: 100%;       
 }
-
-body {
-  /* 保留原始图片路径（/ 指向站点根），并添加备用背景色与显式属性以提高兼容性 */
-  background-image: url('/imgs/bg/home_bg.png');
-  background-color: #b9f4f3; /* fallback color */
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
+#cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+  border-radius: 50%;
+  z-index: 10086;
+  transform: translate3d(-50%, -50%, 0) scale(1);
+  transition: transform 200ms cubic-bezier(.2,.9,.3,1), opacity 160ms linear, background 160ms linear;
+  mix-blend-mode: normal;
+  will-change: transform, opacity;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
-[data-theme="dark"] body {
-  background-image: url('/imgs/bg/dark_mode.png');
-  background-color: #121212; /* fallback color for dark theme */
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
+#cursor .cursor-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--theme-color, #39c5bb);
+  box-shadow: 0 6px 20px rgba(57,197,187,0.28);
+  transition: transform 160ms ease, background 160ms ease, opacity 160ms ease;
+  transform-origin: center;
+}
+
+#cursor .cursor-ring {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 12px 30px rgba(12,16,22,0.12);
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00));
+  transition: transform 260ms cubic-bezier(.2,.9,.3,1), opacity 240ms ease, box-shadow 200ms ease;
+  transform-origin: center;
+  pointer-events: none;
+}
+
+#cursor.hover .cursor-ring {
+  transform: scale(1.45);
+  opacity: 0.95;
+  box-shadow: 0 18px 48px rgba(57,197,187,0.16);
+}
+#cursor.hover .cursor-dot {
+  transform: scale(0.78);
+  background: var(--theme-color, #66d3c5);
+  box-shadow: 0 10px 28px rgba(57,197,187,0.28);
+}
+
+#cursor.active .cursor-dot {
+  transform: scale(0.45);
+  transition: transform 120ms cubic-bezier(.2,.9,.3,1);
+}
+#cursor.active .cursor-ring {
+  transform: scale(1.6);
+  opacity: 0.7;
+}
+
+@keyframes cursorRipple {
+  0% { transform: scale(0.5); opacity: 0.45; }
+  100% { transform: scale(3.2); opacity: 0; }
+}
+#cursor .cursor-ripple {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  pointer-events: none;
+  transform-origin: center;
+  opacity: 0;
+}
+
+#cursor .ripple-animate {
+  animation: cursorRipple 520ms cubic-bezier(.2,.9,.3,1);
+}
+
+/* 深色/浅色主题微调 */
+[data-theme="dark"] #cursor .cursor-ring { border-color: rgba(255,255,255,0.04); background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00)); }
+[data-theme="light"] #cursor .cursor-ring { border-color: rgba(0,0,0,0.06); background: linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.00)); }
+[data-theme="light"] #cursor .cursor-dot { box-shadow: 0 6px 20px rgba(102,102,102,0.12); }
+
+/* 保留小屏幕隐藏逻辑（若需要） */
+@media (max-width: 768px) {
+  #cursor { display: none !important; }
 }
