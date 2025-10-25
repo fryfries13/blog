@@ -39,11 +39,11 @@
     <category term="教程" scheme="https://blog.ctrlflow.us.kg/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/%E6%95%99%E7%A8%8B/"/>
     
     
+    <category term="教程" scheme="https://blog.ctrlflow.us.kg/tags/%E6%95%99%E7%A8%8B/"/>
+    
     <category term="AI" scheme="https://blog.ctrlflow.us.kg/tags/AI/"/>
     
     <category term="人工智能" scheme="https://blog.ctrlflow.us.kg/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
-    
-    <category term="教程" scheme="https://blog.ctrlflow.us.kg/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
@@ -71,9 +71,41 @@
     <category term="教程" scheme="https://blog.ctrlflow.us.kg/categories/B%E7%AB%99%E4%B8%93%E6%A0%8F/%E6%95%99%E7%A8%8B/"/>
     
     
+    <category term="跳过联网" scheme="https://blog.ctrlflow.us.kg/tags/%E8%B7%B3%E8%BF%87%E8%81%94%E7%BD%91/"/>
+    
     <category term="教程" scheme="https://blog.ctrlflow.us.kg/tags/%E6%95%99%E7%A8%8B/"/>
     
-    <category term="跳过联网" scheme="https://blog.ctrlflow.us.kg/tags/%E8%B7%B3%E8%BF%87%E8%81%94%E7%BD%91/"/>
+  </entry>
+  
+  <entry>
+    <title>Ventoy也能豪堪？教你自定义Ventoy主题！</title>
+    <link href="https://blog.ctrlflow.us.kg/post/Ventoy%E4%B9%9F%E8%83%BD%E8%B1%AA%E5%A0%AA%EF%BC%9F%E6%95%99%E4%BD%A0%E8%87%AA%E5%AE%9A%E4%B9%89Ventoy%E4%B8%BB%E9%A2%98/"/>
+    <id>https://blog.ctrlflow.us.kg/post/Ventoy%E4%B9%9F%E8%83%BD%E8%B1%AA%E5%A0%AA%EF%BC%9F%E6%95%99%E4%BD%A0%E8%87%AA%E5%AE%9A%E4%B9%89Ventoy%E4%B8%BB%E9%A2%98/</id>
+    <published>2025-07-13T01:50:00.000Z</published>
+    <updated>2025-10-25T03:36:35.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;div class=&quot;video-container&quot;&gt;
+&lt;iframe</summary>
+        
+      
+    
+    
+    
+    <category term="B站专栏" scheme="https://blog.ctrlflow.us.kg/categories/B%E7%AB%99%E4%B8%93%E6%A0%8F/"/>
+    
+    <category term="教程" scheme="https://blog.ctrlflow.us.kg/categories/B%E7%AB%99%E4%B8%93%E6%A0%8F/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="教程" scheme="https://blog.ctrlflow.us.kg/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="Ventoy" scheme="https://blog.ctrlflow.us.kg/tags/Ventoy/"/>
+    
+    <category term="主题" scheme="https://blog.ctrlflow.us.kg/tags/%E4%B8%BB%E9%A2%98/"/>
     
   </entry>
   
