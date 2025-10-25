@@ -115,20 +115,6 @@
   </url>
   
   <url>
-    <loc>https://blog.ctrlflow.us.kg/tags/Ventoy/</loc>
-    <lastmod>2025-10-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.ctrlflow.us.kg/tags/%E4%B8%BB%E9%A2%98/</loc>
-    <lastmod>2025-10-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.ctrlflow.us.kg/tags/AI/</loc>
     <lastmod>2025-10-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -137,6 +123,20 @@
   
   <url>
     <loc>https://blog.ctrlflow.us.kg/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</loc>
+    <lastmod>2025-10-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.ctrlflow.us.kg/tags/Ventoy/</loc>
+    <lastmod>2025-10-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.ctrlflow.us.kg/tags/%E4%B8%BB%E9%A2%98/</loc>
     <lastmod>2025-10-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -152,14 +152,14 @@
   </url>
   
   <url>
-    <loc>https://blog.ctrlflow.us.kg/categories/B%E7%AB%99%E4%B8%93%E6%A0%8F/%E6%95%99%E7%A8%8B/</loc>
+    <loc>https://blog.ctrlflow.us.kg/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</loc>
     <lastmod>2025-10-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.ctrlflow.us.kg/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</loc>
+    <loc>https://blog.ctrlflow.us.kg/categories/B%E7%AB%99%E4%B8%93%E6%A0%8F/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2025-10-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
