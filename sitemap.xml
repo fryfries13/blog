@@ -2,7 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.ctrlflow.us.kg/post/EP07/</loc>
+    <loc>https://blog.fryfries13.cn/privacy/index.html</loc>
+    
+    <lastmod>2025-11-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.fryfries13.cn/copyright/index.html</loc>
+    
+    <lastmod>2025-11-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.fryfries13.cn/post/EP07/</loc>
     
     <lastmod>2025-10-25</lastmod>
     
@@ -11,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://blog.ctrlflow.us.kg/post/Ventoy%E4%B9%9F%E8%83%BD%E8%B1%AA%E5%A0%AA%EF%BC%9F%E6%95%99%E4%BD%A0%E8%87%AA%E5%AE%9A%E4%B9%89Ventoy%E4%B8%BB%E9%A2%98/</loc>
+    <loc>https://blog.fryfries13.cn/post/Ventoy%E4%B9%9F%E8%83%BD%E8%B1%AA%E5%A0%AA%EF%BC%9F%E6%95%99%E4%BD%A0%E8%87%AA%E5%AE%9A%E4%B9%89Ventoy%E4%B8%BB%E9%A2%98/</loc>
     
     <lastmod>2025-10-25</lastmod>
     
@@ -20,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://blog.ctrlflow.us.kg/link/index.html</loc>
+    <loc>https://blog.fryfries13.cn/link/index.html</loc>
     
     <lastmod>2025-10-19</lastmod>
     
@@ -29,7 +47,7 @@
   </url>
   
   <url>
-    <loc>https://blog.ctrlflow.us.kg/post/MyAI/</loc>
+    <loc>https://blog.fryfries13.cn/post/MyAI/</loc>
     
     <lastmod>2025-10-18</lastmod>
     
@@ -38,7 +56,7 @@
   </url>
   
   <url>
-    <loc>https://blog.ctrlflow.us.kg/privacy/index.html</loc>
+    <loc>https://blog.fryfries13.cn/cookies/index.html</loc>
     
     <lastmod>2025-08-13</lastmod>
     
@@ -47,7 +65,7 @@
   </url>
   
   <url>
-    <loc>https://blog.ctrlflow.us.kg/cookies/index.html</loc>
+    <loc>https://blog.fryfries13.cn/about/index.html</loc>
     
     <lastmod>2025-08-13</lastmod>
     
@@ -56,25 +74,7 @@
   </url>
   
   <url>
-    <loc>https://blog.ctrlflow.us.kg/copyright/index.html</loc>
-    
-    <lastmod>2025-08-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.ctrlflow.us.kg/about/index.html</loc>
-    
-    <lastmod>2025-08-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.ctrlflow.us.kg/tags/index.html</loc>
+    <loc>https://blog.fryfries13.cn/tags/index.html</loc>
     
     <lastmod>2025-08-12</lastmod>
     
@@ -83,7 +83,7 @@
   </url>
   
   <url>
-    <loc>https://blog.ctrlflow.us.kg/categories/index.html</loc>
+    <loc>https://blog.fryfries13.cn/categories/index.html</loc>
     
     <lastmod>2025-08-12</lastmod>
     
@@ -93,51 +93,51 @@
   
 
   <url>
-    <loc>https://blog.ctrlflow.us.kg/</loc>
-    <lastmod>2025-10-25</lastmod>
+    <loc>https://blog.fryfries13.cn/</loc>
+    <lastmod>2025-11-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://blog.ctrlflow.us.kg/tags/%E8%B7%B3%E8%BF%87%E8%81%94%E7%BD%91/</loc>
-    <lastmod>2025-10-25</lastmod>
+    <loc>https://blog.fryfries13.cn/tags/%E8%B7%B3%E8%BF%87%E8%81%94%E7%BD%91/</loc>
+    <lastmod>2025-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.ctrlflow.us.kg/tags/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2025-10-25</lastmod>
+    <loc>https://blog.fryfries13.cn/tags/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2025-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.ctrlflow.us.kg/tags/AI/</loc>
-    <lastmod>2025-10-25</lastmod>
+    <loc>https://blog.fryfries13.cn/tags/AI/</loc>
+    <lastmod>2025-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.ctrlflow.us.kg/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</loc>
-    <lastmod>2025-10-25</lastmod>
+    <loc>https://blog.fryfries13.cn/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</loc>
+    <lastmod>2025-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.ctrlflow.us.kg/tags/Ventoy/</loc>
-    <lastmod>2025-10-25</lastmod>
+    <loc>https://blog.fryfries13.cn/tags/Ventoy/</loc>
+    <lastmod>2025-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.ctrlflow.us.kg/tags/%E4%B8%BB%E9%A2%98/</loc>
-    <lastmod>2025-10-25</lastmod>
+    <loc>https://blog.fryfries13.cn/tags/%E4%B8%BB%E9%A2%98/</loc>
+    <lastmod>2025-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -145,29 +145,29 @@
 
   
   <url>
-    <loc>https://blog.ctrlflow.us.kg/categories/B%E7%AB%99%E4%B8%93%E6%A0%8F/</loc>
-    <lastmod>2025-10-25</lastmod>
+    <loc>https://blog.fryfries13.cn/categories/B%E7%AB%99%E4%B8%93%E6%A0%8F/</loc>
+    <lastmod>2025-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.ctrlflow.us.kg/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</loc>
-    <lastmod>2025-10-25</lastmod>
+    <loc>https://blog.fryfries13.cn/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</loc>
+    <lastmod>2025-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.ctrlflow.us.kg/categories/B%E7%AB%99%E4%B8%93%E6%A0%8F/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2025-10-25</lastmod>
+    <loc>https://blog.fryfries13.cn/categories/B%E7%AB%99%E4%B8%93%E6%A0%8F/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2025-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.ctrlflow.us.kg/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2025-10-25</lastmod>
+    <loc>https://blog.fryfries13.cn/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2025-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
