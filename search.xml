@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>2025年11月18日 Cloudflare 大规模中断事件（已修复）</title>
+      <link href="/post/Cloudflare%E2%80%AF%E5%A4%A7%E8%A7%84%E6%A8%A1%E4%B8%AD%E6%96%AD%E4%BA%8B%E4%BB%B6%EF%BC%88%E5%B7%B2%E4%BF%AE%E5%A4%8D%EF%BC%89/"/>
+      <url>/post/Cloudflare%E2%80%AF%E5%A4%A7%E8%A7%84%E6%A8%A1%E4%B8%AD%E6%96%AD%E4%BA%8B%E4%BB%B6%EF%BC%88%E5%B7%B2%E4%BF%AE%E5%A4%8D%EF%BC%89/</url>
+      
+        <content type="html"><![CDATA[<h1 id="2025年11月18日-Cloudflare-大规模中断事件（已修复）"><a href="#2025年11月18日-Cloudflare-大规模中断事件（已修复）" class="headerlink" title="2025年11月18日 Cloudflare 大规模中断事件（已修复）"></a>2025年11月18日 Cloudflare 大规模中断事件（已修复）</h1><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>2025 年 11 月 18 日，一场始于数据库权限常规调整的技术故障，演变为 Cloudflare 自成立以来影响范围最广、持续时间最长的全球级服务瘫痪事件。作为承载全球近 10% 互联网骨干网流量的核心基础设施服务商，Cloudflare 的此次中断不仅导致数十万家企业客户业务停摆，更波及社交、AI、电商、公共服务等关键领域，引发全球互联网用户对数字基础设施稳定性的广泛担忧。</p><p>本记录基于 Cloudflare 官方故障通报、第三方监测平台数据及行业公开报道，从事件概况、时间线、技术溯源、服务影响、连锁反应、官方应对及行业反思七大维度，全面复盘此次瘫痪事件的前因后果。旨在为技术从业者、企业运维人员及互联网行业研究者提供客观、详实的参考资料，同时也为全球互联网基础设施的风险防控与稳定性优化提供借鉴思路。</p><h3 id="一、事件核心概况"><a href="#一、事件核心概况" class="headerlink" title="一、事件核心概况"></a>一、事件核心概况</h3><table><thead><tr><th>关键信息</th><th>具体内容</th></tr></thead><tbody><tr><td>故障发生时间</td><td>世界标准时间（UTC）2025 年 11 月 18 日 11:20（北京时间 19:20）</td></tr><tr><td>故障结束时间</td><td>UTC 17:06（北京时间 11 月 19 日 01:06），全系统恢复正常</td></tr><tr><td>持续时长</td><td>约 5 小时 46 分钟（核心服务恢复耗时 3 小时 10 分钟）</td></tr><tr><td>根本原因</td><td>数据库权限变更导致机器人管理系统 “特征文件” 体积翻倍，超出软件大小限制引发核心代理崩溃（非网络攻击）</td></tr><tr><td>影响范围</td><td>全球数十万家企业客户，涵盖社交、AI、电商、云服务等领域，波及全球近 10% 的互联网骨干网流量</td></tr></tbody></table><h3 id="二、故障时间线（UTC-时区）"><a href="#二、故障时间线（UTC-时区）" class="headerlink" title="二、故障时间线（UTC 时区）"></a>二、故障时间线（UTC 时区）</h3><ol><li><p><strong>11:20 故障爆发</strong></p><p>Cloudflare 网络开始出现大规模 5xx 错误，用户访问客户网站时触发 “Cloudflare 网络故障” 提示页，核心 CDN、安全服务率先中断。</p></li><li><p><strong>11:20-14:30 排查与误判阶段</strong></p></li></ol><ul><li><p>初期怀疑为超大规模 DDoS 攻击，陷入排查误区</p></li><li><p>特征文件每 5 分钟交替生成正确 &#x2F; 错误版本，导致系统反复恢复又崩溃（5xx 错误呈波动状态）</p></li><li><p>故障状态页面、客户支持门户同步瘫痪，用户无法获取官方通报</p></li></ul><ol><li><p><strong>14:30 核心问题解决</strong></p><p>确认故障源于异常增大的特征文件，停止错误文件传播，替换为早期稳定版本，强制重启核心代理，核心流量逐步恢复。</p></li><li><p><strong>14:30-17:06 全面恢复阶段</strong></p><p>逐步减轻网络负载，修复 Turnstile、Workers KV 等附属服务，17:06 所有系统恢复正常，5xx 错误回归基准值。</p></li></ol><h3 id="三、故障技术溯源"><a href="#三、故障技术溯源" class="headerlink" title="三、故障技术溯源"></a>三、故障技术溯源</h3><h4 id="1-直接诱因"><a href="#1-直接诱因" class="headerlink" title="1. 直接诱因"></a>1. 直接诱因</h4><ul><li><p>数据库集群权限管理升级过程中，查询逻辑异常导致机器人管理系统的 “特征文件”（含机器学习模型特征集）条目翻倍，体积超出预设限制。</p></li><li><p>该文件每 5 分钟自动同步至全球节点，引发核心路由软件（Pingora）批量崩溃。</p></li></ul><h3 id="四、受影响核心服务"><a href="#四、受影响核心服务" class="headerlink" title="四、受影响核心服务"></a>四、受影响核心服务</h3><table><thead><tr><th>服务 &#x2F; 产品</th><th>影响描述</th><th>恢复状态</th></tr></thead><tbody><tr><td>核心 CDN 与安全服务</td><td>大规模 HTTP 5xx 错误，用户无法访问客户网站</td><td>UTC 14:30 起逐步恢复</td></tr><tr><td>Turnstile（验证服务）</td><td>完全无法加载，导致大量网站登录功能失效</td><td>UTC 16:00 恢复</td></tr><tr><td>Workers KV（边缘存储）</td><td>5xx 错误激增，依赖服务无法读写数据</td><td>UTC 15:10 恢复</td></tr><tr><td>管理仪表板</td><td>可访问但无法登录（因 Turnstile 失效）</td><td>UTC 16:30 恢复登录</td></tr><tr><td>电子邮件安全</td><td>垃圾邮件检测准确性下降，部分自动操作故障</td><td>无核心影响，已修复</td></tr><tr><td>Access（身份验证）</td><td>新认证失败，现有会话不受影响</td><td>UTC 13:05 启动回滚，14:00 恢复</td></tr></tbody></table><h3 id="五、行业影响与连锁反应"><a href="#五、行业影响与连锁反应" class="headerlink" title="五、行业影响与连锁反应"></a>五、行业影响与连锁反应</h3><ol><li><strong>知名平台受波及</strong></li></ol><ul><li><p>社交平台：X（原 Twitter）收到超 1.15 万份故障报告，部分地区服务中断</p></li><li><p>AI 服务：ChatGPT 登录及 API 调用故障，北京时间 21 点仍有大量用户无法使用</p></li><li><p>其他：Spotify、Uber、Shopify、Zoom 等均出现访问异常</p></li></ul><ol><li><p><strong>市场与股价波动</strong></p><p>美股盘前 Cloudflare 股价跌近 4%，市值蒸发约 30 亿美元，反映市场对基础设施稳定性的担忧。</p></li><li><p><strong>公共服务影响</strong></p><p>美国部分公共交通系统出现调度系统访问波动，纽约市应急管理部门启动专项监测。</p></li></ol><h3 id="六、官方回应与后续措施"><a href="#六、官方回应与后续措施" class="headerlink" title="六、官方回应与后续措施"></a>六、官方回应与后续措施</h3><ol><li><p><strong>致歉声明</strong></p><p>Cloudflare 官方强调 “此次中断不可接受”，对客户及全球互联网用户深表歉意，承认团队 “深感痛心与失望”。</p></li><li><p><strong>整改承诺</strong></p></li></ol><ul><li><p>优化特征文件生成的大小校验机制，增加多级阈值限制</p></li><li><p>改进数据库权限变更的分阶段部署流程，强化自动化测试</p></li><li><p>建立核心配置文件的热备份与快速回滚系统</p></li><li><p>完善故障诊断体系，避免误判攻击与内部故障</p></li></ul><h3 id="七、事件反思与行业启示"><a href="#七、事件反思与行业启示" class="headerlink" title="七、事件反思与行业启示"></a>七、事件反思与行业启示</h3><ol><li><p><strong>单点依赖风险凸显</strong></p><p>Cloudflare 承载全球近 10% 互联网流量，其集中化架构使其成为 “互联网最大单点故障源之一”，暴露了全球互联网基础设施过度集中的隐患。</p></li><li><p><strong>配置变更的安全边界</strong></p><p>常规权限调整引发级联故障，反映出高风险操作缺乏足够的预演与熔断机制，需强化 “最小权限原则” 与自动化校验。</p></li><li><p><strong>历史故障对比</strong></p></li></ol><ul><li><p>2019 年 7 月：软件漏洞导致计算资源耗尽，宕机 30 分钟</p></li><li><p>2022 年 6 月：19 个数据中心故障，中断 1.5 小时</p></li><li><p>2025 年 3 月：密码轮换错误导致 R2 存储服务中断 1 小时 7 分钟</p></li><li><p>本次故障持续时间最长、影响最广，凸显流程优化的迫切性</p></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Cloudflare </tag>
+            
+            <tag> 事故 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>MyAI模板 - 创建自己的AI，网页部署，更好分享</title>
       <link href="/post/MyAI/"/>
       <url>/post/MyAI/</url>

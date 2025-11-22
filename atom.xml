@@ -6,7 +6,7 @@
   <link href="https://blog.fryfries13.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.fryfries13.cn/"/>
-  <updated>2025-10-18T10:24:17.637Z</updated>
+  <updated>2025-11-22T01:38:46.000Z</updated>
   <id>https://blog.fryfries13.cn/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2025年11月18日 Cloudflare 大规模中断事件（已修复）</title>
+    <link href="https://blog.fryfries13.cn/post/Cloudflare%E2%80%AF%E5%A4%A7%E8%A7%84%E6%A8%A1%E4%B8%AD%E6%96%AD%E4%BA%8B%E4%BB%B6%EF%BC%88%E5%B7%B2%E4%BF%AE%E5%A4%8D%EF%BC%89/"/>
+    <id>https://blog.fryfries13.cn/post/Cloudflare%E2%80%AF%E5%A4%A7%E8%A7%84%E6%A8%A1%E4%B8%AD%E6%96%AD%E4%BA%8B%E4%BB%B6%EF%BC%88%E5%B7%B2%E4%BF%AE%E5%A4%8D%EF%BC%89/</id>
+    <published>2025-11-22T01:38:46.000Z</published>
+    <updated>2025-11-22T01:38:46.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;2025年11月18日-Cloudflare-大规模中断事件（已修复）&quot;&gt;&lt;a href=&quot;#2025年11月18日-Cloudflare-大规模中断事件（已修复）&quot; class=&quot;headerlink&quot; title=&quot;2025年11月18日</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Cloudflare" scheme="https://blog.fryfries13.cn/tags/Cloudflare/"/>
+    
+    <category term="事故" scheme="https://blog.fryfries13.cn/tags/%E4%BA%8B%E6%95%85/"/>
+    
+  </entry>
   
   <entry>
     <title>MyAI模板 - 创建自己的AI，网页部署，更好分享</title>

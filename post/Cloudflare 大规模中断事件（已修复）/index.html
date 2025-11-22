@@ -1,0 +1,672 @@
+<!DOCTYPE html><html lang="zh_CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>2025年11月18日 Cloudflare 大规模中断事件（已修复） | Fry酥条の博客</title><meta name="keywords" content="Cloudflare,事故"><meta name="author" content="Fry酥条"><meta name="copyright" content="Fry酥条"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="2025年11月18日 Cloudflare 大规模中断事件（已修复）"><meta name="application-name" content="2025年11月18日 Cloudflare 大规模中断事件（已修复）"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="2025年11月18日 Cloudflare 大规模中断事件（已修复）"><meta property="og:url" content="https://blog.fryfries13.cn/post/Cloudflare%E2%80%AF%E5%A4%A7%E8%A7%84%E6%A8%A1%E4%B8%AD%E6%96%AD%E4%BA%8B%E4%BB%B6%EF%BC%88%E5%B7%B2%E4%BF%AE%E5%A4%8D%EF%BC%89/index.html"><meta property="og:site_name" content="Fry酥条の博客"><meta property="og:description" content="2025年11月18日 Cloudflare 大规模中断事件（已修复）前言2025 年 11 月 18 日，一场始于数据库权限常规调整的技术故障，演变为 Cloudflare 自成立以来影响范围最广、持续时间最长的全球级服务瘫痪事件。作为承载全球近 10% 互联网骨干网流量的核心基础设施服务商，Cl"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://cf-assets.www.cloudflare.com/zkvhlag99gkb/3ony9XsTIteX8DNEFJDddJ/7da2edd5abca755e9088002a0f5d1758/BLOG-3079_2.png"><meta property="article:author" content="Fry酥条"><meta property="article:tag" content="hexo, 博客, Ctrl_Flow, Fry酥条, Fry酥条,  Fry酥条の博客,  Ctrl_Flowの博客"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://cf-assets.www.cloudflare.com/zkvhlag99gkb/3ony9XsTIteX8DNEFJDddJ/7da2edd5abca755e9088002a0f5d1758/BLOG-3079_2.png"><meta name="description" content="2025年11月18日 Cloudflare 大规模中断事件（已修复）前言2025 年 11 月 18 日，一场始于数据库权限常规调整的技术故障，演变为 Cloudflare 自成立以来影响范围最广、持续时间最长的全球级服务瘫痪事件。作为承载全球近 10% 互联网骨干网流量的核心基础设施服务商，Cl"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="https://blog.fryfries13.cn/post/Cloudflare%E2%80%AF%E5%A4%A7%E8%A7%84%E6%A8%A1%E4%B8%AD%E6%96%AD%E4%BA%8B%E4%BB%B6%EF%BC%88%E5%B7%B2%E4%BF%AE%E5%A4%8D%EF%BC%89/"><link rel="preconnect" href="//cdn.cbd.int"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: undefined,
+  postHeadAiDescription: undefined,
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: {"enable":true,"default":"晚上好👋","list":[{"greeting":"晚安😴","startTime":0,"endTime":5},{"greeting":"早上好鸭👋, 祝你一天好心情！","startTime":6,"endTime":9},{"greeting":"上午好👋, 状态很好，鼓励一下～","startTime":10,"endTime":10},{"greeting":"11点多啦, 在坚持一下就吃饭啦～","startTime":11,"endTime":11},{"greeting":"午安👋, 宝贝","startTime":12,"endTime":14},{"greeting":"🌈充实的一天辛苦啦！","startTime":14,"endTime":18},{"greeting":"19点喽, 奖励一顿丰盛的大餐吧🍔。","startTime":19,"endTime":19},{"greeting":"晚上好👋, 在属于自己的时间好好放松😌~","startTime":20,"endTime":24}]},
+  twikooEnvId: 'https://tw.fryfries13.cn',
+  commentBarrageConfig:undefined,
+  music_page_default: "nav_music",
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: {"skills":["🤖️ 主研后端不善前端","🔍 新人UP主什么都懂","🔨 什么都懂但懂得不多","🤝 设计剪辑GET中","🧱 软硬件样样会一点点","💢 被小白折磨已玉玉"]},
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: Fry酥条","link":"链接: ","source":"来源: Fry酥条の博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'Fry酥条の博客',
+  title: '2025年11月18日 Cloudflare 大规模中断事件（已修复）',
+  postAI: '',
+  pageFillDescription: '2025年11月18日 Cloudflare 大规模中断事件（已修复）, 前言, 一、事件核心概况, 二、故障时间线（UTC 时区）, 三、故障技术溯源, 1. 直接诱因, 四、受影响核心服务, 五、行业影响与连锁反应, 六、官方回应与后续措施, 七、事件反思与行业启示年月日大规模中断事件已修复前言年月日一场始于数据库权限常规调整的技术故障演变为自成立以来影响范围最广持续时间最长的全球级服务瘫痪事件作为承载全球近互联网骨干网流量的核心基础设施服务商的此次中断不仅导致数十万家企业客户业务停摆更波及社交电商公共服务等关键领域引发全球互联网用户对数字基础设施稳定性的广泛担忧本记录基于官方故障通报第三方监测平台数据及行业公开报道从事件概况时间线技术溯源服务影响连锁反应官方应对及行业反思七大维度全面复盘此次瘫痪事件的前因后果旨在为技术从业者企业运维人员及互联网行业研究者提供客观详实的参考资料同时也为全球互联网基础设施的风险防控与稳定性优化提供借鉴思路一事件核心概况关键信息具体内容故障发生时间世界标准时间年月日北京时间故障结束时间北京时间月日全系统恢复正常持续时长约小时分钟核心服务恢复耗时小时分钟根本原因数据库权限变更导致机器人管理系统特征文件体积翻倍超出软件大小限制引发核心代理崩溃非网络攻击影响范围全球数十万家企业客户涵盖社交电商云服务等领域波及全球近的互联网骨干网流量二故障时间线时区故障爆发网络开始出现大规模错误用户访问客户网站时触发网络故障提示页核心安全服务率先中断排查与误判阶段初期怀疑为超大规模攻击陷入排查误区特征文件每分钟交替生成正确错误版本导致系统反复恢复又崩溃错误呈波动状态故障状态页面客户支持门户同步瘫痪用户无法获取官方通报核心问题解决确认故障源于异常增大的特征文件停止错误文件传播替换为早期稳定版本强制重启核心代理核心流量逐步恢复全面恢复阶段逐步减轻网络负载修复等附属服务所有系统恢复正常错误回归基准值三故障技术溯源直接诱因数据库集群权限管理升级过程中查询逻辑异常导致机器人管理系统的特征文件含机器学习模型特征集条目翻倍体积超出预设限制该文件每分钟自动同步至全球节点引发核心路由软件批量崩溃四受影响核心服务服务产品影响描述恢复状态核心与安全服务大规模错误用户无法访问客户网站起逐步恢复验证服务完全无法加载导致大量网站登录功能失效恢复边缘存储错误激增依赖服务无法读写数据恢复管理仪表板可访问但无法登录因失效恢复登录电子邮件安全垃圾邮件检测准确性下降部分自动操作故障无核心影响已修复身份验证新认证失败现有会话不受影响启动回滚恢复五行业影响与连锁反应知名平台受波及社交平台原收到超万份故障报告部分地区服务中断服务登录及调用故障北京时间点仍有大量用户无法使用其他等均出现访问异常市场与股价波动美股盘前股价跌近市值蒸发约亿美元反映市场对基础设施稳定性的担忧公共服务影响美国部分公共交通系统出现调度系统访问波动纽约市应急管理部门启动专项监测六官方回应与后续措施致歉声明官方强调此次中断不可接受对客户及全球互联网用户深表歉意承认团队深感痛心与失望整改承诺优化特征文件生成的大小校验机制增加多级阈值限制改进数据库权限变更的分阶段部署流程强化自动化测试建立核心配置文件的热备份与快速回滚系统完善故障诊断体系避免误判攻击与内部故障七事件反思与行业启示单点依赖风险凸显承载全球近互联网流量其集中化架构使其成为互联网最大单点故障源之一暴露了全球互联网基础设施过度集中的隐患配置变更的安全边界常规权限调整引发级联故障反映出高风险操作缺乏足够的预演与熔断机制需强化最小权限原则与自动化校验历史故障对比年月软件漏洞导致计算资源耗尽宕机分钟年月个数据中心故障中断小时年月密码轮换错误导致存储服务中断小时分钟本次故障持续时间最长影响最广凸显流程优化的迫切性',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-11-22 09:38:46',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Fry酥条の博客" type="application/atom+xml">
+</head><body data-type="anzhiyu"><div id="web_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="/imgs/avatar.png"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">Fry酥条の博客</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/categories/"><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><span> 标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/B%E7%AB%99%E4%B8%93%E6%A0%8F/"><span> B站专栏</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/archives/"><span> 全部文章</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 站点导航</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://home.fryfries13.cn/"><span> 主页</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://fryfries13.cn/"><span> 附件表</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://github.fryfries13.cn/"><span> Github文件加速</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/link/"><span> 友情连接</span></a></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/about/"><span> 关于本人</span></a></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/AI/" style="font-size: 1.05rem;">AI<sup>1</sup></a><a href="/tags/Cloudflare/" style="font-size: 1.05rem;">Cloudflare<sup>1</sup></a><a href="/tags/Ventoy/" style="font-size: 1.05rem;">Ventoy<sup>1</sup></a><a href="/tags/%E4%B8%BB%E9%A2%98/" style="font-size: 1.05rem;">主题<sup>1</sup></a><a href="/tags/%E4%BA%8B%E6%95%85/" style="font-size: 1.05rem;">事故<sup>1</sup></a><a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" style="font-size: 1.05rem;">人工智能<sup>1</sup></a><a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 1.05rem;">教程<sup>3</sup></a><a href="/tags/%E8%B7%B3%E8%BF%87%E8%81%94%E7%BD%91/" style="font-size: 1.05rem;">跳过联网<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/11/"><span class="card-archive-list-date">十一月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/08/"><span class="card-archive-list-date">八月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/07/"><span class="card-archive-list-date">七月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="article-meta tags"><a class="article-meta__tags" href="/tags/Cloudflare/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Cloudflare</span></a><a class="article-meta__tags" href="/tags/%E4%BA%8B%E6%95%85/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>事故</span></a></span></div></div><h1 class="post-title" itemprop="name headline">2025年11月18日 Cloudflare 大规模中断事件（已修复）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2025-11-22T01:38:46.000Z" title="发表于 2025-11-22 09:38:46">2025-11-22</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2025-11-22T01:38:46.000Z" title="更新于 2025-11-22 09:38:46">2025-11-22</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字数总计:</span><span class="word-count" title="文章字数">1.6k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator"></span><span class="post-meta-pv-cv" id="" data-flag-title="2025年11月18日 Cloudflare 大规模中断事件（已修复）"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label" title="阅读量">阅读量:</span><span id="busuanzi_value_page_pv"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://cf-assets.www.cloudflare.com/zkvhlag99gkb/3ony9XsTIteX8DNEFJDddJ/7da2edd5abca755e9088002a0f5d1758/BLOG-3079_2.png"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="https://blog.fryfries13.cn/post/Cloudflare%E2%80%AF%E5%A4%A7%E8%A7%84%E6%A8%A1%E4%B8%AD%E6%96%AD%E4%BA%8B%E4%BB%B6%EF%BC%88%E5%B7%B2%E4%BF%AE%E5%A4%8D%EF%BC%89/"><header><a href="/tags/Cloudflare/" tabindex="-1" itemprop="url">Cloudflare</a><a href="/tags/%E4%BA%8B%E6%95%85/" tabindex="-1" itemprop="url">事故</a><h1 id="CrawlerTitle" itemprop="name headline">2025年11月18日 Cloudflare 大规模中断事件（已修复）</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">Fry酥条</span><time itemprop="dateCreated datePublished" datetime="2025-11-22T01:38:46.000Z" title="发表于 2025-11-22 09:38:46">2025-11-22</time><time itemprop="dateCreated datePublished" datetime="2025-11-22T01:38:46.000Z" title="更新于 2025-11-22 09:38:46">2025-11-22</time></header><h1 id="2025年11月18日-Cloudflare-大规模中断事件（已修复）"><a href="#2025年11月18日-Cloudflare-大规模中断事件（已修复）" class="headerlink" title="2025年11月18日 Cloudflare 大规模中断事件（已修复）"></a>2025年11月18日 Cloudflare 大规模中断事件（已修复）</h1><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>2025 年 11 月 18 日，一场始于数据库权限常规调整的技术故障，演变为 Cloudflare 自成立以来影响范围最广、持续时间最长的全球级服务瘫痪事件。作为承载全球近 10% 互联网骨干网流量的核心基础设施服务商，Cloudflare 的此次中断不仅导致数十万家企业客户业务停摆，更波及社交、AI、电商、公共服务等关键领域，引发全球互联网用户对数字基础设施稳定性的广泛担忧。</p>
+<p>本记录基于 Cloudflare 官方故障通报、第三方监测平台数据及行业公开报道，从事件概况、时间线、技术溯源、服务影响、连锁反应、官方应对及行业反思七大维度，全面复盘此次瘫痪事件的前因后果。旨在为技术从业者、企业运维人员及互联网行业研究者提供客观、详实的参考资料，同时也为全球互联网基础设施的风险防控与稳定性优化提供借鉴思路。</p>
+<h3 id="一、事件核心概况"><a href="#一、事件核心概况" class="headerlink" title="一、事件核心概况"></a>一、事件核心概况</h3><table>
+<thead>
+<tr>
+<th>关键信息</th>
+<th>具体内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>故障发生时间</td>
+<td>世界标准时间（UTC）2025 年 11 月 18 日 11:20（北京时间 19:20）</td>
+</tr>
+<tr>
+<td>故障结束时间</td>
+<td>UTC 17:06（北京时间 11 月 19 日 01:06），全系统恢复正常</td>
+</tr>
+<tr>
+<td>持续时长</td>
+<td>约 5 小时 46 分钟（核心服务恢复耗时 3 小时 10 分钟）</td>
+</tr>
+<tr>
+<td>根本原因</td>
+<td>数据库权限变更导致机器人管理系统 “特征文件” 体积翻倍，超出软件大小限制引发核心代理崩溃（非网络攻击）</td>
+</tr>
+<tr>
+<td>影响范围</td>
+<td>全球数十万家企业客户，涵盖社交、AI、电商、云服务等领域，波及全球近 10% 的互联网骨干网流量</td>
+</tr>
+</tbody></table>
+<h3 id="二、故障时间线（UTC-时区）"><a href="#二、故障时间线（UTC-时区）" class="headerlink" title="二、故障时间线（UTC 时区）"></a>二、故障时间线（UTC 时区）</h3><ol>
+<li><p><strong>11:20 故障爆发</strong></p>
+<p>Cloudflare 网络开始出现大规模 5xx 错误，用户访问客户网站时触发 “Cloudflare 网络故障” 提示页，核心 CDN、安全服务率先中断。</p>
+</li>
+<li><p><strong>11:20-14:30 排查与误判阶段</strong></p>
+</li>
+</ol>
+<ul>
+<li><p>初期怀疑为超大规模 DDoS 攻击，陷入排查误区</p>
+</li>
+<li><p>特征文件每 5 分钟交替生成正确 &#x2F; 错误版本，导致系统反复恢复又崩溃（5xx 错误呈波动状态）</p>
+</li>
+<li><p>故障状态页面、客户支持门户同步瘫痪，用户无法获取官方通报</p>
+</li>
+</ul>
+<ol>
+<li><p><strong>14:30 核心问题解决</strong></p>
+<p>确认故障源于异常增大的特征文件，停止错误文件传播，替换为早期稳定版本，强制重启核心代理，核心流量逐步恢复。</p>
+</li>
+<li><p><strong>14:30-17:06 全面恢复阶段</strong></p>
+<p>逐步减轻网络负载，修复 Turnstile、Workers KV 等附属服务，17:06 所有系统恢复正常，5xx 错误回归基准值。</p>
+</li>
+</ol>
+<h3 id="三、故障技术溯源"><a href="#三、故障技术溯源" class="headerlink" title="三、故障技术溯源"></a>三、故障技术溯源</h3><h4 id="1-直接诱因"><a href="#1-直接诱因" class="headerlink" title="1. 直接诱因"></a>1. 直接诱因</h4><ul>
+<li><p>数据库集群权限管理升级过程中，查询逻辑异常导致机器人管理系统的 “特征文件”（含机器学习模型特征集）条目翻倍，体积超出预设限制。</p>
+</li>
+<li><p>该文件每 5 分钟自动同步至全球节点，引发核心路由软件（Pingora）批量崩溃。</p>
+</li>
+</ul>
+<h3 id="四、受影响核心服务"><a href="#四、受影响核心服务" class="headerlink" title="四、受影响核心服务"></a>四、受影响核心服务</h3><table>
+<thead>
+<tr>
+<th>服务 &#x2F; 产品</th>
+<th>影响描述</th>
+<th>恢复状态</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>核心 CDN 与安全服务</td>
+<td>大规模 HTTP 5xx 错误，用户无法访问客户网站</td>
+<td>UTC 14:30 起逐步恢复</td>
+</tr>
+<tr>
+<td>Turnstile（验证服务）</td>
+<td>完全无法加载，导致大量网站登录功能失效</td>
+<td>UTC 16:00 恢复</td>
+</tr>
+<tr>
+<td>Workers KV（边缘存储）</td>
+<td>5xx 错误激增，依赖服务无法读写数据</td>
+<td>UTC 15:10 恢复</td>
+</tr>
+<tr>
+<td>管理仪表板</td>
+<td>可访问但无法登录（因 Turnstile 失效）</td>
+<td>UTC 16:30 恢复登录</td>
+</tr>
+<tr>
+<td>电子邮件安全</td>
+<td>垃圾邮件检测准确性下降，部分自动操作故障</td>
+<td>无核心影响，已修复</td>
+</tr>
+<tr>
+<td>Access（身份验证）</td>
+<td>新认证失败，现有会话不受影响</td>
+<td>UTC 13:05 启动回滚，14:00 恢复</td>
+</tr>
+</tbody></table>
+<h3 id="五、行业影响与连锁反应"><a href="#五、行业影响与连锁反应" class="headerlink" title="五、行业影响与连锁反应"></a>五、行业影响与连锁反应</h3><ol>
+<li><strong>知名平台受波及</strong></li>
+</ol>
+<ul>
+<li><p>社交平台：X（原 Twitter）收到超 1.15 万份故障报告，部分地区服务中断</p>
+</li>
+<li><p>AI 服务：ChatGPT 登录及 API 调用故障，北京时间 21 点仍有大量用户无法使用</p>
+</li>
+<li><p>其他：Spotify、Uber、Shopify、Zoom 等均出现访问异常</p>
+</li>
+</ul>
+<ol>
+<li><p><strong>市场与股价波动</strong></p>
+<p>美股盘前 Cloudflare 股价跌近 4%，市值蒸发约 30 亿美元，反映市场对基础设施稳定性的担忧。</p>
+</li>
+<li><p><strong>公共服务影响</strong></p>
+<p>美国部分公共交通系统出现调度系统访问波动，纽约市应急管理部门启动专项监测。</p>
+</li>
+</ol>
+<h3 id="六、官方回应与后续措施"><a href="#六、官方回应与后续措施" class="headerlink" title="六、官方回应与后续措施"></a>六、官方回应与后续措施</h3><ol>
+<li><p><strong>致歉声明</strong></p>
+<p>Cloudflare 官方强调 “此次中断不可接受”，对客户及全球互联网用户深表歉意，承认团队 “深感痛心与失望”。</p>
+</li>
+<li><p><strong>整改承诺</strong></p>
+</li>
+</ol>
+<ul>
+<li><p>优化特征文件生成的大小校验机制，增加多级阈值限制</p>
+</li>
+<li><p>改进数据库权限变更的分阶段部署流程，强化自动化测试</p>
+</li>
+<li><p>建立核心配置文件的热备份与快速回滚系统</p>
+</li>
+<li><p>完善故障诊断体系，避免误判攻击与内部故障</p>
+</li>
+</ul>
+<h3 id="七、事件反思与行业启示"><a href="#七、事件反思与行业启示" class="headerlink" title="七、事件反思与行业启示"></a>七、事件反思与行业启示</h3><ol>
+<li><p><strong>单点依赖风险凸显</strong></p>
+<p>Cloudflare 承载全球近 10% 互联网流量，其集中化架构使其成为 “互联网最大单点故障源之一”，暴露了全球互联网基础设施过度集中的隐患。</p>
+</li>
+<li><p><strong>配置变更的安全边界</strong></p>
+<p>常规权限调整引发级联故障，反映出高风险操作缺乏足够的预演与熔断机制，需强化 “最小权限原则” 与自动化校验。</p>
+</li>
+<li><p><strong>历史故障对比</strong></p>
+</li>
+</ol>
+<ul>
+<li><p>2019 年 7 月：软件漏洞导致计算资源耗尽，宕机 30 分钟</p>
+</li>
+<li><p>2022 年 6 月：19 个数据中心故障，中断 1.5 小时</p>
+</li>
+<li><p>2025 年 3 月：密码轮换错误导致 R2 存储服务中断 1 小时 7 分钟</p>
+</li>
+<li><p>本次故障持续时间最长、影响最广，凸显流程优化的迫切性</p>
+</li>
+</ul>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/imgs/avatar.png" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/imgs/avatar.png" title="头像" alt="头像"></a><div class="post-copyright__author_name">Fry酥条</div><div class="post-copyright__author_desc">你们都去关注我</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://blog.fryfries13.cn/post/Cloudflare%E2%80%AF%E5%A4%A7%E8%A7%84%E6%A8%A1%E4%B8%AD%E6%96%AD%E4%BA%8B%E4%BB%B6%EF%BC%88%E5%B7%B2%E4%BF%AE%E5%A4%8D%EF%BC%89/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://blog.fryfries13.cn/post/Cloudflare%E2%80%AF%E5%A4%A7%E8%A7%84%E6%A8%A1%E4%B8%AD%E6%96%AD%E4%BA%8B%E4%BB%B6%EF%BC%88%E5%B7%B2%E4%BF%AE%E5%A4%8D%EF%BC%89/')">2025年11月18日 Cloudflare 大规模中断事件（已修复）</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://blog.fryfries13.cn/post/Cloudflare%E2%80%AF%E5%A4%A7%E8%A7%84%E6%A8%A1%E4%B8%AD%E6%96%AD%E4%BA%8B%E4%BB%B6%EF%BC%88%E5%B7%B2%E4%BF%AE%E5%A4%8D%EF%BC%89/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=2025年11月18日 Cloudflare 大规模中断事件（已修复）&amp;url=https://blog.fryfries13.cn/post/Cloudflare%E2%80%AF%E5%A4%A7%E8%A7%84%E6%A8%A1%E4%B8%AD%E6%96%AD%E4%BA%8B%E4%BB%B6%EF%BC%88%E5%B7%B2%E4%BF%AE%E5%A4%8D%EF%BC%89/&amp;pic=https://cf-assets.www.cloudflare.com/zkvhlag99gkb/3ony9XsTIteX8DNEFJDddJ/7da2edd5abca755e9088002a0f5d1758/BLOG-3079_2.png" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.fryfries13.cn" target="_blank">Fry酥条の博客</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/Cloudflare/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>Cloudflare<span class="tagsPageCount">1</span></a><a class="post-meta__box__tags" href="/tags/%E4%BA%8B%E6%95%85/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>事故<span class="tagsPageCount">1</span></a></div></div></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/post/MyAI/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/imgs/480829384-a3750f3e-19d6-4b27-8d02-7c3a62175c4c.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">MyAI模板 - 创建自己的AI，网页部署，更好分享</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="anzhiyufont anzhiyu-icon-comments"></i><span> 评论</span></div><div class="comment-randomInfo"><a onclick="anzhiyu.addRandomCommentInfo()" href="javascript:void(0)">匿名评论</a><a href="/privacy" style="margin-left: 4px">隐私政策</a></div><div class="comment-tips" id="comment-tips"><span>✅ 你无需删除空行，直接评论以获取最佳展示效果</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div><div class="comment-barrage"></div></div><!-- 原有小部件集合--><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/imgs/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/imgs/doge.png" alt="status"/></div></div><div class="author-info__description"><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">大家好，我是<b style="color:#fff">Fry酥条，</b>我同时也是B站的UP主<b style="color:#fff">Ctrl_Flow</b>我会在这里发布一些图文版的视频资源。</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">相信你可以在这里找到对你有用的<b style="color:#fff">知识</b>和<b style="color:#fff">教程</b>。</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" target="_blank" rel="noopener" href="https://home.fryfries13.cn/"><h1 class="author-info__name">Fry酥条</h1><div class="author-info__desc">你们都去关注我</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/fryfries13" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="social-icon faa-parent animated-hover" href="https://space.bilibili.com/1808002444" target="_blank" title="BiliBili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a></div></div></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bullhorn anzhiyu-shake"></i><span>公告</span></div><div class="announcement_content">欢迎访问我的博客！🎉</div><div id="welcome-info"></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#2025%E5%B9%B411%E6%9C%8818%E6%97%A5-Cloudflare-%E5%A4%A7%E8%A7%84%E6%A8%A1%E4%B8%AD%E6%96%AD%E4%BA%8B%E4%BB%B6%EF%BC%88%E5%B7%B2%E4%BF%AE%E5%A4%8D%EF%BC%89"><span class="toc-text">2025年11月18日 Cloudflare 大规模中断事件（已修复）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E4%BA%8B%E4%BB%B6%E6%A0%B8%E5%BF%83%E6%A6%82%E5%86%B5"><span class="toc-text">一、事件核心概况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%95%85%E9%9A%9C%E6%97%B6%E9%97%B4%E7%BA%BF%EF%BC%88UTC-%E6%97%B6%E5%8C%BA%EF%BC%89"><span class="toc-text">二、故障时间线（UTC 时区）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%95%85%E9%9A%9C%E6%8A%80%E6%9C%AF%E6%BA%AF%E6%BA%90"><span class="toc-text">三、故障技术溯源</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E7%9B%B4%E6%8E%A5%E8%AF%B1%E5%9B%A0"><span class="toc-text">1. 直接诱因</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%8F%97%E5%BD%B1%E5%93%8D%E6%A0%B8%E5%BF%83%E6%9C%8D%E5%8A%A1"><span class="toc-text">四、受影响核心服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E8%A1%8C%E4%B8%9A%E5%BD%B1%E5%93%8D%E4%B8%8E%E8%BF%9E%E9%94%81%E5%8F%8D%E5%BA%94"><span class="toc-text">五、行业影响与连锁反应</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E5%AE%98%E6%96%B9%E5%9B%9E%E5%BA%94%E4%B8%8E%E5%90%8E%E7%BB%AD%E6%8E%AA%E6%96%BD"><span class="toc-text">六、官方回应与后续措施</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E4%BA%8B%E4%BB%B6%E5%8F%8D%E6%80%9D%E4%B8%8E%E8%A1%8C%E4%B8%9A%E5%90%AF%E7%A4%BA"><span class="toc-text">七、事件反思与行业启示</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/post/Cloudflare%E2%80%AF%E5%A4%A7%E8%A7%84%E6%A8%A1%E4%B8%AD%E6%96%AD%E4%BA%8B%E4%BB%B6%EF%BC%88%E5%B7%B2%E4%BF%AE%E5%A4%8D%EF%BC%89/" title="2025年11月18日 Cloudflare 大规模中断事件（已修复）"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cf-assets.www.cloudflare.com/zkvhlag99gkb/3ony9XsTIteX8DNEFJDddJ/7da2edd5abca755e9088002a0f5d1758/BLOG-3079_2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2025年11月18日 Cloudflare 大规模中断事件（已修复）"/></a><div class="content"><a class="title" href="/post/Cloudflare%E2%80%AF%E5%A4%A7%E8%A7%84%E6%A8%A1%E4%B8%AD%E6%96%AD%E4%BA%8B%E4%BB%B6%EF%BC%88%E5%B7%B2%E4%BF%AE%E5%A4%8D%EF%BC%89/" title="2025年11月18日 Cloudflare 大规模中断事件（已修复）">2025年11月18日 Cloudflare 大规模中断事件（已修复）</a><time datetime="2025-11-22T01:38:46.000Z" title="发表于 2025-11-22 09:38:46">2025-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/MyAI/" title="MyAI模板 - 创建自己的AI，网页部署，更好分享"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/imgs/480829384-a3750f3e-19d6-4b27-8d02-7c3a62175c4c.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MyAI模板 - 创建自己的AI，网页部署，更好分享"/></a><div class="content"><a class="title" href="/post/MyAI/" title="MyAI模板 - 创建自己的AI，网页部署，更好分享">MyAI模板 - 创建自己的AI，网页部署，更好分享</a><time datetime="2025-08-17T18:48:44.000Z" title="发表于 2025-08-18 02:48:44">2025-08-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/EP07/" title="BypassNRO被移除？今天教你Windows11最新预览版跳过联网"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/imgs/52ee650405801b920b6707e6bd3fad394d85e2dc.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="BypassNRO被移除？今天教你Windows11最新预览版跳过联网"/></a><div class="content"><a class="title" href="/post/EP07/" title="BypassNRO被移除？今天教你Windows11最新预览版跳过联网">BypassNRO被移除？今天教你Windows11最新预览版跳过联网</a><time datetime="2025-08-12T18:48:44.000Z" title="发表于 2025-08-13 02:48:44">2025-08-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/Ventoy%E4%B9%9F%E8%83%BD%E8%B1%AA%E5%A0%AA%EF%BC%9F%E6%95%99%E4%BD%A0%E8%87%AA%E5%AE%9A%E4%B9%89Ventoy%E4%B8%BB%E9%A2%98/" title="Ventoy也能豪堪？教你自定义Ventoy主题！"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/imgs/150ce606f89aa53456d3dd071d7fc2da8710e2fe.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Ventoy也能豪堪？教你自定义Ventoy主题！"/></a><div class="content"><a class="title" href="/post/Ventoy%E4%B9%9F%E8%83%BD%E8%B1%AA%E5%A0%AA%EF%BC%9F%E6%95%99%E4%BD%A0%E8%87%AA%E5%AE%9A%E4%B9%89Ventoy%E4%B8%BB%E9%A2%98/" title="Ventoy也能豪堪？教你自定义Ventoy主题！">Ventoy也能豪堪？教你自定义Ventoy主题！</a><time datetime="2025-07-13T01:50:00.000Z" title="发表于 2025-07-13 09:50:00">2025-07-13</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="footer_deal"><a class="deal_link" href="mailto:370002394@qq.com" title="email"><i class="anzhiyufont anzhiyu-icon-envelope"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://github.com/fryfries13" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://space.bilibili.com/1808002444" title="Bilibili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a><img class="footer_mini_logo" title="返回顶部" alt="返回顶部" onclick="anzhiyu.scrollToDest(0, 500)" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/imgs/avatar.png" size="50px"/><a class="deal_link" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC"><i class="anzhiyufont anzhiyu-icon-copyright-line"></i></a><a class="deal_link" href="/atom.xml" title="RSS"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-rss"></use></svg></a><a class="deal_link" href="/sitemap.xml" title="站点地图"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-sitemap"></use></svg></a></div><div id="anzhiyu-footer"><div class="footer-group"><div class="footer-title">工具推荐</div><div class="footer-links"><a class="footer-item" title="Github文件加速" target="_blank" rel="noopener" href="https://github.fryfries13.cn/">Github文件加速</a><a class="footer-item" title="SZY图床" target="_blank" rel="noopener" href="https://img.szyd.fun/">SZY图床</a><a class="footer-item" title="订阅节点转换" target="_blank" rel="noopener" href="https://sub-web.netlify.app/">订阅节点转换</a></div></div><div class="footer-group"><div class="footer-title">技术支持</div><div class="footer-links"><a class="footer-item" title="Hexo" target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a><a class="footer-item" title="Cloudflare" target="_blank" rel="noopener" href="https://cloudflare.com/">Cloudflare</a><a class="footer-item" title="Github" target="_blank" rel="noopener" href="https://github.com/">Github</a><a class="footer-item" title="AnZhiYu 主题" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu">AnZhiYu 主题</a></div></div><div class="footer-group"><div class="footer-title">导航</div><div class="footer-links"><a class="footer-item" title="分类" href="/categories/">分类</a><a class="footer-item" title="标签" href="/tags/">标签</a><a class="footer-item" title="B 站专栏" href="/categories/B%E7%AB%99%E4%B8%93%E6%A0%8F/">B 站专栏</a><a class="footer-item" title="全部文章" href="/archives/">全部文章</a></div></div><div class="footer-group"><div class="footer-title">协议</div><div class="footer-links"><a class="footer-item" title="隐私协议" href="/privacy/">隐私协议</a><a class="footer-item" title="Cookies" href="/cookies/">Cookies</a><a class="footer-item" title="版权协议" href="/copyright/">版权协议</a></div></div></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo_v7.3.0" title="博客框架为Hexo_v7.3.0"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/svg/hexo.svg" alt="博客框架为Hexo_v7.3.0"/></a><a class="github-badge" target="_blank" href="https://blog.anheyu.com/" style="margin-inline:5px" data-title="本站使用AnZhiYu主题" title="本站使用AnZhiYu主题"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/svg/anzhiyu.svg" alt="本站使用AnZhiYu主题"/></a><a class="github-badge" target="_blank" href="https://cloudflare.com/" style="margin-inline:5px" data-title="本站使用Cloudflare提供CDN加速" title="本站使用Cloudflare提供CDN加速"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/svg/cloudflare.svg" alt="本站使用Cloudflare提供CDN加速"/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" data-title="本站项目由Github托管" title="本站项目由Github托管"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/svg/github.svg" alt="本站项目由Github托管"/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" data-title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/svg/copyright.svg" alt="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"/></a></p></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2025 By <a class="footer-bar-link" href="/" title="Fry酥条" target="_blank">Fry酥条</a></div></div><div id="footer-type-tips"></div><div class="js-pjax"><script>function subtitleType () {
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      if (true) {
+        const from = '出自 ' + data.from
+        const sub = []
+        sub.unshift(data.hitokoto, from)
+        window.typed = new Typed('#footer-type-tips', {
+          strings: sub,
+          startDelay: 300,
+          typeSpeed: 150,
+          loop: true,
+          backSpeed: 50,
+        })
+      } else {
+        document.getElementById('footer-type-tips').innerHTML = data.hitokoto
+      }
+    })
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.cbd.int/typed.js@2.1.0/dist/typed.umd.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}
+</script></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://qm.qq.com/q/Q7Hx8INZ6w" title="加入我的粉丝群！- Ctrl_Flowの茶楼🍵">加入我的粉丝群！- Ctrl_Flowの茶楼🍵</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://icp.gov.moe/?keyword=20250428" title="萌ICP备20250428号">萌ICP备20250428号</a><a class="footer-bar-link cc" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" title="cc协议"><i class="anzhiyufont anzhiyu-icon-copyright-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-by-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-nc-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-nd-line"></i></a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">4</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="https://blog.fryfries13.cn/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://img.szyd.fun/" title="SZY图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.szyd.fun/favicon.ico" alt="SZY图床"/><span class="back-menu-item-text">SZY图床</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/categories/"><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><span> 标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/B%E7%AB%99%E4%B8%93%E6%A0%8F/"><span> B站专栏</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/archives/"><span> 全部文章</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 站点导航</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://home.fryfries13.cn/"><span> 主页</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://fryfries13.cn/"><span> 附件表</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://github.fryfries13.cn/"><span> Github文件加速</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/link/"><span> 友情连接</span></a></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/about/"><span> 关于本人</span></a></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/AI/" style="font-size: 0.88rem;">AI<sup>1</sup></a><a href="/tags/Cloudflare/" style="font-size: 0.88rem;">Cloudflare<sup>1</sup></a><a href="/tags/Ventoy/" style="font-size: 0.88rem;">Ventoy<sup>1</sup></a><a href="/tags/%E4%B8%BB%E9%A2%98/" style="font-size: 0.88rem;">主题<sup>1</sup></a><a href="/tags/%E4%BA%8B%E6%95%85/" style="font-size: 0.88rem;">事故<sup>1</sup></a><a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" style="font-size: 0.88rem;">人工智能<sup>1</sup></a><a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 0.88rem;">教程<sup>3</sup></a><a href="/tags/%E8%B7%B3%E8%BF%87%E8%81%94%E7%BD%91/" style="font-size: 0.88rem;">跳过联网<sup>1</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="anzhiyufont anzhiyu-icon-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="is-center" id="loading-database"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-pulse-icon"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("01/01/2025 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎来到我的博客!`,
+    `未来已来, 尽在掌握`,
+    `
+
+      ███████╗██████╗ ██╗   ██╗     ███████╗██████╗ ██╗███████╗███████╗
+      ██╔════╝██╔══██╗╚██╗ ██╔╝     ██╔════╝██╔══██╗██║██╔════╝██╔════╝
+      █████╗  ██████╔╝ ╚████╔╝      █████╗  ██████╔╝██║█████╗  ███████╗
+      ██╔══╝  ██╔══██╗  ╚██╔╝       ██╔══╝  ██╔══██╗██║██╔══╝  ╚════██║
+      ██║     ██║  ██║   ██║███████╗██║     ██║  ██║██║███████╗███████║
+      ╚═╝     ╚═╝  ╚═╝   ╚═╝╚══════╝╚═╝     ╚═╝  ╚═╝╚═╝╚══════╝╚══════╝
+
+    `,
+    "已上线",
+    dnum,
+    "天",
+    "©2025 By Fry酥条 V1.6.14",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【大聪明】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，大聪明.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by Fry酥条 %c 你正在访问 Fry酥条 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(() => {
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://tw.fryfries13.cn',
+      region: '',
+      onCommentLoaded: () => {
+        anzhiyu.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') setTimeout(runFn,0)
+    else getScript('https://cdn.cbd.int/twikoo@1.6.39/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://tw.fryfries13.cn',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const runFn = () => {
+    init();
+    
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) anzhiyu.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else {
+      loadTwikoo()
+    }
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script><input type="hidden" name="page-type" id="page-type" value="post"></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getComment = () => {
+    const runTwikoo = () => {
+      twikoo.getRecentComments({
+        envId: 'https://tw.fryfries13.cn',
+        region: '',
+        pageSize: 6,
+        includeReply: true
+      }).then(function (res) {
+        const twikooArray = res.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.id,
+            'date': new Date(e.created).toISOString()
+          }
+        })
+
+        saveToLocal.set('twikoo-newest-comments', JSON.stringify(twikooArray), 10/(60*24))
+        generateHtml(twikooArray)
+      }).catch(function (err) {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.textContent= "无法获取评论，请确认相关配置是否正确"
+      })
+    }
+
+    if (typeof twikoo === 'object') {
+      runTwikoo()
+    } else {
+      getScript('https://cdn.cbd.int/twikoo@1.6.39/dist/twikoo.all.min.js').then(runTwikoo)
+    }
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'><div class='name'><span>${array[i].nick} </span></div></a>`
+        }
+        
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <time datetime="${array[i].date}">${anzhiyu.diffDate(array[i].date, true)}</time></div>
+        </div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom && ($dom.innerHTML= result)
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('twikoo-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://cdn.bootcdn.net/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script><script src="/js/anzhiyu/right_click_menu.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><script async src="/js/blog_font.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script><script src="/js/txmap.js"></script><script src="/js/fps.js"></script><script src="/js/cursor.js"></script><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/dist/fireworks.min.js"></script><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","meta[property=\"og:type\"]","meta[property=\"og:site_name\"]","meta[property=\"og:description\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
