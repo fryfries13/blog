@@ -2,20 +2,6 @@
   background-color: transparent !important;
 }
 
-html, body {
-  background-image: url('https://cdn.szyd.fun/2025/08/11/68996b95eaa52.webp') !important;
-  background-repeat: no-repeat !important;
-  background-position: center center !important;
-  background-size: cover !important;
-  background-attachment: fixed !important;
-  background-color: transparent !important;
-}
-
-[data-theme="dark"] html,
-[data-theme="dark"] body {
-  background-image: url('https://cdn.szyd.fun/2025/07/26/6884d6816223b.webp') !important;
-}
-
 @media (max-width: 768px) {
   html, body {
     background-attachment: scroll !important;
